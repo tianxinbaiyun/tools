@@ -3,7 +3,6 @@ package menu
 import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"github.com/tianxinbaiyun/tools/timestamp/tutorials"
 )
@@ -60,16 +59,7 @@ func MakeNav(setTutorial func(tutorial tutorials.Tutorial), loadPrevious bool) f
 		tree.Select(currentPref)
 	}
 
-	themes := container.NewGridWithColumns(2,
-		widget.NewButton("Dark", func() {
-			a.Settings().SetTheme(theme.DarkTheme())
-		}),
-		widget.NewButton("Light", func() {
-			a.Settings().SetTheme(theme.LightTheme())
-		}),
-	)
-
-	return container.NewBorder(nil, themes, nil, nil, tree)
+	return container.NewBorder(nil, nil, nil, nil, tree)
 }
 
 func unsupportedTutorial(t tutorials.Tutorial) bool {

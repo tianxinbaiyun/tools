@@ -23,8 +23,8 @@ func main() {
 	w := a.NewWindow("Fyne Demo")
 	topWindow = w
 
-	w.SetMainMenu(menu.MakeTopMenu(a, w))
-	w.SetMaster()
+	//w.SetMainMenu(menu.MakeTopMenu(a, w))
+	//w.SetMaster()
 
 	content := container.NewMax()
 	title := widget.NewLabel("Component name")
